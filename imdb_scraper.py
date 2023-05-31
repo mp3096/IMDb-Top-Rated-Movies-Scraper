@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
+import csv
+from tabulate import tabulate
 
 def scrape_top_rated_movies():
     url = "https://www.imdb.com/chart/top"
@@ -17,17 +18,16 @@ def scrape_top_rated_movies():
         year = movie.span.text.strip("()")
         rating = rating.text.strip()
 
-        movies.append({
-            "Title": title,
-            "Year": year,
-            "Rating": rating
-        })
+        movies.append([title, year, rating])
 
     return movies
 
 def save_movies_to_csv(movies_data, filename):
-    df = pd.DataFrame(movies_data)
-    df.to_csv(filename, index=False)
+    with open(filename, "w", newline="") as file:
+        writer = csv.writer(file)
+        table = tabulate(movies_data, headers=["Title", "Year", "Rating"], tablefmt="pipe")
+        writer.writerow([table])
+
     print(f"Movie data saved to {filename} successfully.")
 
 # Scrape top rated movies and save to CSV
