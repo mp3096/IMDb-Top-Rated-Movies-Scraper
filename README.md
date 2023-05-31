@@ -1,28 +1,35 @@
-# IMDb-Top-Rated-Movies-Scraper
+IMDb Web Scraper
+This project is a web scraper that fetches data from IMDb's website and extracts information about the top-rated movies. It provides an easy way to gather details such as movie titles, release years, and ratings from the IMDb Top Rated Movies chart.
 
-IMDb Top Rated Movies Scraper
-This project is a web scraping application that retrieves the top rated movies from IMDb and saves the movie data to a CSV file. It demonstrates how to use Python, along with the Requests, BeautifulSoup, and Pandas libraries, to scrape data from a website.
+Key Features
+Scrapes the IMDb website to retrieve information about the top-rated movies.
+Extracts movie titles, release years, and ratings from the IMDb Top Rated Movies chart.
+Provides a convenient way to fetch up-to-date movie data from IMDb.
 
-Features
-Scrapes the IMDb website to retrieve the top rated movies.
-Extracts movie titles, release years, and ratings from the webpage.
-Saves the scraped movie data to a CSV file for further analysis or use.
-Requirements
-Python 3.x
-Requests library (pip install requests)
-BeautifulSoup library (pip install beautifulsoup4)
-Pandas library (pip install pandas)
+Technologies Used
+Python
+Requests library
+Beautiful Soup library
+CSV file handling
+tabulate
+
+
+Installation
+Clone the GitHub repository:
+bash
+Copy code
+git clone https://github.com/mp3096/imdb-web-scraper.git
+Install the required dependencies:
+Copy code
+pip install requests beautifulsoup4 tabulate
+
+
 Usage
-Install the required libraries using the provided commands.
-Run the imdb_scraper.py script.
-The script will scrape the IMDb top rated movies and save the data to a CSV file named "top_rated_movies.csv".
-Note
-Please ensure that you comply with IMDb's terms of service and any legal restrictions when using this scraper.
+Run the imdb_scraper.py script:
+Copy code
+python imdb_scraper.py
+The script will scrape the IMDb website and retrieve information about the top-rated movies.
+The movie data will be saved to a CSV file (top_rated_movies.csv) in the current directory.
 Contributing
-Contributions to enhance or expand the functionality of this project are welcome. If you encounter any issues or have ideas for improvements, feel free to open an issue or submit a pull request.
+Contributions to this project are welcome! If you have any ideas for improvements or bug fixes, please feel free to submit a pull request.
 
-License
-This project is licensed under the MIT License.
-
-Acknowledgements
-This project is inspired by the need to retrieve movie data from IMDb and learn about web scraping techniques.
